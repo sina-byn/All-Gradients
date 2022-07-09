@@ -16,14 +16,13 @@ class LoadMoreButton {
 
         parentElem.innerHTML = "";
         loader.render();
-
-        const hideLoader = () => {
-            this.loadMore(GRADIENTS_DATA, this.shownGradientsCount);
-            parentElem.innerHTML = "";
-            parentElem.appendChild(altButton);
-        };
-
-        waitBeforeInit(hideLoader, 1000);
+        waitBeforeInit(() => this.hideLoader(parentElem, altButton), 1000);
+    }
+    
+    static hideLoader(parentElem, altButton) {
+        this.loadMore(GRADIENTS_DATA, this.shownGradientsCount);
+        parentElem.innerHTML = "";
+        parentElem.appendChild(altButton);
     }
 
     static loadMore(data, shownCount) {

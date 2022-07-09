@@ -1,7 +1,7 @@
 class Loader {
     parentElem = "";
 
-    constructor(parentElem) {
+    constructor(parentElem, ) {
         this.parentElem = parentElem;
     }
 
