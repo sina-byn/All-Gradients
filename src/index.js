@@ -9,9 +9,17 @@ import GRADIENTS_DATA from './data/GradientsData';
 import GradientCard from './components/GradientCard';
 import LoadMoreButton from './components/ui/LoadMoreButton';
 
-GRADIENTS_DATA.slice(0, 10).forEach((gradient, idx) => {
-    const gradinetCard = new GradientCard(idx, gradient, null ,false);
-    gradinetCard.render();
-});
+// Importing Functions
+import { scrollTop } from './helpers/functions';
+
+
+window.onload = () => {
+    GRADIENTS_DATA.slice(0, 10).forEach((gradient, idx) => {
+        const gradinetCard = new GradientCard(idx, gradient, null ,false);
+        gradinetCard.render();
+    });
+    const scrollTopButton = document.querySelector('.scroll-top-btn');
+    scrollTopButton.onclick = scrollTop;
+};
 
 LoadMoreButton.render();
