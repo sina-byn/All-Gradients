@@ -20,7 +20,7 @@ window.onload = () => {
     RandomGradientCard.render();
 
     GRADIENTS_DATA.slice(0, viewedLength || 10).forEach((gradient, idx) => {
-        const gradinetCard = new GradientCard(idx, gradient, null ,false);
+        const gradinetCard = new GradientCard(idx, gradient, null);
         gradinetCard.render();
     });
     const scrollTopButton = document.querySelector('.scroll-top-btn');

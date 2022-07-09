@@ -19,6 +19,14 @@ const GRADIENTS_DATA = [
     {stop_1: '#f03306', stop_2: '#92bfe1'},
     {stop_1: '#1b4c48', stop_2: '#1bda23'},
     {stop_1: '#b46ca4', stop_2: '#16014f'},
+    
+    {stop_1: '#fb0613', stop_2: '#610a65'},
+    {stop_1: '#163cb4', stop_2: '#8c0e06'},
+    {stop_1: '#ca8ed8', stop_2: '#3ad47a'},
+    {stop_1: '#1796ec', stop_2: '#541cc7'},
+    {stop_1: '#f03306', stop_2: '#92bfe1'},
+    {stop_1: '#1b4c48', stop_2: '#1bda23'},
+    {stop_1: '#b46ca4', stop_2: '#16014f'},
 ];
 
 export default GRADIENTS_DATA;

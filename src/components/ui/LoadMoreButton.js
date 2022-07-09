@@ -44,7 +44,7 @@ class LoadMoreButton {
         sessionStorage.setItem('viewed-length', this.shownGradientsCount);
 
         newGradients.forEach((gradient, idx) => {
-            const gradientCard = new GradientCard(shownCount + idx, gradient, null, true);
+            const gradientCard = new GradientCard(shownCount + idx, gradient, null);
             gradientCard.render();
         });
     }
