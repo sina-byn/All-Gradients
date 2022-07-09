@@ -16,7 +16,7 @@ class ToastNotification {
         const toastNotifContainer = document.querySelector('.toast-notif-container');
         const toastNotif = document.createElement('div');
 
-        toastNotif.className = "toast-notif fade-out flex bg-custom-gradient rounded-lg shadow-lg px-4 py-3";
+        toastNotif.className = "toast-notif fade-out flex bg-custom-gradient text-sm xs:text-base rounded-lg shadow-lg px-4 py-3";
         toastNotif.innerText = this.message;
 
         waitBeforeInit(() => this.removeNotif(toastNotif), 1500);
