@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+
+@font-face {
+  font-family: "fignoregular";
+  src: url("./assets/fonts/figno-regular-webfont.woff2") format("woff2"),
+    url("./assets/fonts/figno-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fignoregular";
+  src: url("./assets/fonts/Figno-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --ff-logo: "fignoregular", sans-serif;
+  --ff-main: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #cffafe;
+  background: -webkit-linear-gradient(
+    to bottom right,
+    #f3e8ff,
+    #cffafe,
+    #fce7f3
+  );
+  background: linear-gradient(to bottom right, #f3e8ff, #cffafe, #fce7f3);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-main);
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  overflow-x: hidden;
+  padding: 0px 30px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility Classes */
+.logo {
+  font-family: var(--ff-logo);
+}
+
+.animate-after {
+  position: relative;
+}
+
+.animate-after::after {
+  content: "";
+  position: absolute;
+  inset: 100% 0;
+  width: 100%;
+  height: 2px;
+  background: #f97316;
+  transform: scaleX(0);
+  transition: transform 200ms linear;
+}
+
+.animate-after:hover::after {
+  transform: scaleX(1);
+}
+
+.is-active::after {
+  transform: scaleX(1);
+}
+
+.fade-out {
+  animation: fade-out 1s linear 1s;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}

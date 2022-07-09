@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .bg-custom-gradient {
+        @apply bg-gradient-to-br
+        from-purple-100
+        via-cyan-100
+        to-pink-100
+    }
+    
+    .fading-line {
+        @apply bg-gradient-to-r
+        from-orange-500
+        to-transparent
+    }
+}
