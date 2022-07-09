@@ -81,11 +81,11 @@
         <div
           class="fading-line w-[calc(100%_-_70px)] h-2 absolute left-[70px] -z-10"
         ></div>
-        <h2 class="w-[60px] text-lg overflow-hidden mb-1">Guide</h2>
+        <h2 class="w-[60px] text-[17px] xs:text-lg overflow-hidden mb-1">Guide</h2>
       </div>
-      <div class="guide-text mt-4">
-        <div class="flex items-center gap-x-2">
-          <span>Click on the clipboard icon to get the code of the gradient :</span>
+      <div class="guide-text text-[15px] xs:text-base mt-4">
+        <div class="flex flex-wrap gap-x-2 mb-4 sm:mb-1">
+          <span>Click on the clipboard icon to get the code of the gradient <span class="hidden sm:inline">:</span></span>
           <svg
             class="h-6 fill-gray-800"
             xmlns="http://www.w3.org/2000/svg"
@@ -96,19 +96,19 @@
             ></path>
           </svg>
         </div>
-        <div>
-          <p>Click on each color code you see to copy its code.</p>
-        </div>
-        <div>
+        <p>Click on each color code you see to copy its code.</p>
+        <p class="mt-4">
           The output code syntax looks like :
+        </p>
+        <div class="syntax-highlighter-container bg-[#0D1117] rounded-2xl py-3 px-4">
           <pre
-            class="w-full bg-[#0D1117] overflow-x-auto py-4 pl-8 rounded-2xl mt-4"
+            class="syntax-highlighter w-full overflow-x-auto md:pl-8"
           ><code class="w-full min-w-[400px] text-gray-200">
-  <span class="text-yellow-400">// fallback - background-color - used in case of support issues</span>
-  <span class="text-violet-500">background-color:</span> #4389A2;
-  <span class="text-yellow-400">// -webkit-prefix</span>
-  <span class="text-violet-500">background:</span> -webkit-linear-gradient(to bottom right, #5C258D, #4389A2);
-  <span class="text-violet-500">background:</span> linear-gradient(to bottom right, #5C258D, #4389A2);</code>
+<span class="text-yellow-400">// fallback - background-color - used in case of support issues</span>
+<span class="text-violet-500">background-color:</span> #4389A2;
+<span class="text-yellow-400">// -webkit-prefix</span>
+<span class="text-violet-500">background:</span> -webkit-linear-gradient(to bottom right, #5C258D, #4389A2);
+<span class="text-violet-500">background:</span> linear-gradient(to bottom right, #5C258D, #4389A2);</code>
           </pre>
         </div>
       </div>

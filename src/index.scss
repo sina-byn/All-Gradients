@@ -106,7 +106,6 @@ a {
 }
 
 .card-data::-webkit-scrollbar {
-  -webkit-appearance: none;
   width: 7px;
 }
 
@@ -115,6 +114,10 @@ a {
   background: $webkit-bg-gradient;
   background: $bg-gradient;
   border-radius: 10px;
+}
+
+.syntax-highlighter::-webkit-scrollbar {
+  height: 5px;
 }
 
 // Animations
