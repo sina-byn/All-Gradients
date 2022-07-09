@@ -1,6 +1,6 @@
 // Importing Components
 import GradientCardData from "../GradientCardData";
-// import ToastNotification from "./ToastNotification";
+import ToastNotification from "./ToastNotification";
 
 // Importing Functions
 import {
@@ -26,7 +26,8 @@ class StopColorInput {
 
     copyHandler(e) {
         navigator.clipboard.writeText(e.target.innerText).then(() => {
-            
+            const toastNotif = new ToastNotification("Color Copied to Clipboard =)");
+            toastNotif.render();
         }).catch(err => {
             console.error(err);
         });

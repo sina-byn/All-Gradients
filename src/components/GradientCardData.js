@@ -1,3 +1,6 @@
+// Importing Components
+import ToastNotification from "./ui/ToastNotification";
+
 class GradientCardData {
     id = "";
     gradientData = "";
@@ -12,6 +15,7 @@ class GradientCardData {
     setGradientData(parentElem) {
         this.gradientData.forEach(color => {
             const colorDisp = document.createElement('p');
+            colorDisp.className = "w-[100px] text-center tracking-wide rounded-lg border-2 border-gray-200 pt-[7px] pb-[5px] cursor-pointer hover:bg-gray-200/25 active:scale-95";
             colorDisp.innerText = color;
             colorDisp.onclick = this.colorCopyHandler;
             parentElem.appendChild(colorDisp);
@@ -20,13 +24,15 @@ class GradientCardData {
 
     colorCopyHandler(e) {
         navigator.clipboard.writeText(e.target.innerText).then(() => {
-
+            const toastNotif = new ToastNotification("Color Copied to Clipboard =)");
+            toastNotif.render();
         }).catch(err => console.error(err));
     }
 
     gradinetCopyHandler(gradientCode) {
         navigator.clipboard.writeText(gradientCode).then(() => {
-
+            const toastNotif = new ToastNotification("Gradient Copied to Clipboard =)");
+            toastNotif.render();
         }).catch(err => console.error(err));
     }
 
@@ -37,7 +43,7 @@ class GradientCardData {
         const btnWrap = document.createElement('div');
 
         cardDataWrap.className = "card-data-wrap flex items-center justify-center w-full h-full absolute bg-black/60 opacity-0 transition-all duration-300 py-10 hover:opacity-100";
-        cardData.className = "card-data flex flex-col items-center justify-center w-full h-full relative text-gray-200 overflow-y-auto";
+        cardData.className = "card-data flex flex-col gap-y-2 items-center justify-center w-full h-full relative text-[13px] text-gray-200 overflow-y-auto";
 
         this.setGradientData(cardData);
 

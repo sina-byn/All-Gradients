@@ -1,3 +1,6 @@
+// Importing Components
+import ToastNotification from './ui/ToastNotification';
+
 class RandomGradientCard {
     static randomStop_1 = "";
     static randomStop_2 = "";
@@ -32,7 +35,8 @@ class RandomGradientCard {
 
     static gradientCopyHandler() {
         navigator.clipboard.writeText(this.gradientCode).then(() => {
-
+            const toastNotif = new ToastNotification("Gradient Copied to Clipboard =)");
+            toastNotif.render();
         }).catch(err => console.error(err));
     }
 
