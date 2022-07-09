@@ -42,8 +42,8 @@ class GradientCardData {
         const cardData = document.createElement('div');
         const btnWrap = document.createElement('div');
 
-        cardDataWrap.className = "card-data-wrap flex items-center justify-center w-full h-full absolute bg-black/60 opacity-0 transition-all duration-300 py-10 hover:opacity-100";
-        cardData.className = "card-data flex flex-col gap-y-2 items-center justify-center w-full h-full relative text-[13px] text-gray-200 overflow-y-auto";
+        cardDataWrap.className = "card-data-wrap flex items-center justify-center w-full h-full absolute bg-black/60 opacity-0 transition-all duration-300 pr-[10px] py-10 hover:opacity-100";
+        cardData.className = "card-data flex flex-col gap-y-2 items-center justify-center w-full h-full relative text-[13px] text-gray-200 pl-[10px] overflow-y-auto";
 
         this.setGradientData(cardData);
 

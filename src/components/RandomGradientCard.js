@@ -54,7 +54,7 @@ class RandomGradientCard {
 
         card.className = "card-random flex flex-col items-center justify-center w-full aspect-square relative rounded-2xl overflow-hidden shadow-xl";
 
-        regenerateBtn.className = "regenerate-button text-gray-200 border-2 rounded-lg px-6 py-2 transition-all duration-300 hover:bg-gray-100/50 hover:text-gray-900 active:scale-95";
+        regenerateBtn.className = "regenerate-button text-gray-200 border-2 rounded-lg px-6 py-2 transition-all duration-300 hover:bg-gray-100/25 active:scale-95";
         regenerateBtn.setAttribute('type', 'button');
         regenerateBtn.innerText = "random gradient";
 

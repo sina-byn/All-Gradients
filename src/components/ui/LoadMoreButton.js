@@ -55,7 +55,7 @@ class LoadMoreButton {
 
         loadMoreButton.setAttribute('type', 'button');
         loadMoreButton.innerHTML = `
-            <p class="text-base text-gray-200 border-2 border-gray-200 rounded-lg px-6 py-2 transition-all duration-300 hover:bg-gray-100/50 hover:text-gray-900 active:scale-95">
+            <p class="text-base text-center text-gray-200 border-2 border-gray-200 rounded-lg px-6 py-2 transition-all duration-300 hover:bg-gray-100/25 active:scale-95">
                 Load More
             </p>
         `;
