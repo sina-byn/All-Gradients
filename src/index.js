@@ -18,6 +18,12 @@ import { scrollTop } from './helpers/functions';
 
 window.onload = () => {
     const viewedLength = +sessionStorage.getItem('viewed-length');
+    const gradientsCountDisp = document.querySelector('.gradients-count-disp');
+    const scrollTopButton = document.querySelector('.scroll-top-btn');
+    
+    gradientsCountDisp.innerHTML = `
+        <span class="text-orange-500 font-bold">Gradients Count : </span>${GRADIENTS_DATA.length} Gradients
+    `;
 
     RandomGradientCard.render();
 
@@ -25,7 +31,6 @@ window.onload = () => {
         const gradinetCard = new GradientCard(idx, gradient, null, false);
         gradinetCard.render();
     });
-    const scrollTopButton = document.querySelector('.scroll-top-btn');
     scrollTopButton.onclick = scrollTop;
 
     if (viewedLength !== GRADIENTS_DATA.length) {
