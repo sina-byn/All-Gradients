@@ -42,9 +42,8 @@ class LoadMoreButton {
         (this.shownGradientsCount === len) ? loadMoreButton.remove() : null;
 
         sessionStorage.setItem('viewed-length', this.shownGradientsCount);
-        console.log(newGradients);
+
         newGradients.forEach((gradient, idx) => {
-            console.log(gradient);
             const gradientCard = new GradientCard(shownCount + idx, gradient, null, true);
             gradientCard.render();
         });
