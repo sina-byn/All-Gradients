@@ -5,11 +5,13 @@ class GradientCard {
     id = "";
     gradientData = "";
     parentElem = "";
+    hasSeparateStyles = "";
 
-    constructor(id, gradientData, parentElem) {
+    constructor(id, gradientData, parentElem, hasSeparateStyles) {
         this.id = id;
         this.gradientData = Object.values(gradientData);
         this.parentElem = parentElem;
+        this.hasSeparateStyles = hasSeparateStyles;
     }
 
     setGradient() {
@@ -42,13 +44,19 @@ class GradientCard {
 
         card.className = `card-${this.id} w-full aspect-square relative rounded-2xl overflow-hidden shadow-xl`;
 
-        if (!this.parentElem) {
+        if (!this.hasSeparateStyles) {
             cardStyleTag.innerHTML += `
+            .card-${this.id} {${this.setGradient()}}
+            `;
+        } else {
+            card.classList.replace('w-full', 'w-[calc(100%_-_20px)]');
+            const customStyleTag = document.querySelector('.custom-gradient-styles');
+            customStyleTag.innerHTML = `
             .card-${this.id} {${this.setGradient()}}
             `;
         }
 
-        if (!loadMoreButton) {
+        if (!loadMoreButton && !this.parentElem) {
             cardsContainer.appendChild(card);
         } else if (loadMoreButton && !this.parentElem) {
             cardsContainer.insertBefore(card, loadMoreButton);

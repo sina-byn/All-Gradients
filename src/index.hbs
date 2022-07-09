@@ -10,6 +10,7 @@
     <title>{{htmlWebpackPlugin.options.title}}</title>
     <style class="gradients-styles"></style>
     <style class="random-gradient-styles"></style>
+    <style class="custom-gradient-styles"></style>
   </head>
   <body>
     {{! Header }}
@@ -53,6 +54,26 @@
 
       </div>
     </main>
+
+    {{! Custom Gradient Section }}
+    <section
+      id="custom-gradient-section"
+      class="custom-gradient-section flex flex-col mt-16"
+    >
+      <div class="title flex items-center relative mb-5">
+        <div
+          class="fading-line w-[calc(100%_-_290px)] h-2 absolute left-[290px] -z-10"
+        ></div>
+        <h2 class="w-[280px] text-lg overflow-hidden mb-1">Create Your Custom
+          Gradient</h2>
+      </div>
+      <div class="container grid grid-cols-6 gap-6 w-full">
+
+      </div>
+      <div class="custom-gradient-container grid grid-cols-4 mt-8">
+
+      </div>
+    </section>
 
     {{! Toast-Notification-Container }}
     <div
