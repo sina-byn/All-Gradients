@@ -1,3 +1,6 @@
+// Importing Components
+import GradientCardData from "./GradientCardData";
+
 class GradientCard {
     id = "";
     gradientData = "";
@@ -36,14 +39,16 @@ class GradientCard {
         const cardsContainer = document.querySelector('.cards-container');
         const card = document.createElement('div');
         const cardStyleTag = document.querySelector('.gradients-styles');
+        const cardData = new GradientCardData(this.id, this.gradientData, this.setGradient());
 
         card.className = `card-${this.id} w-full aspect-square relative rounded-2xl overflow-hidden shadow-xl`;
-        
+
         cardStyleTag.innerHTML += `
         .card-${this.id} {${this.setGradient()}}
         `;
 
         cardsContainer.appendChild(card);
+        cardData.render();
     }
 }
 
