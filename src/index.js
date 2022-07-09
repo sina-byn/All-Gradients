@@ -48,4 +48,12 @@ window.onload = () => {
     stopColorInp_1.render();
     stopColorInp_2.render();
     AddStopColorButton.render();
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 1200) {
+            scrollTopButton.style.display = "flex";
+        } else {
+            scrollTopButton.style.display = "none";
+        }
+    });
 };
