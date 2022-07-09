@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{hbs,js}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        '2xs': '420px',
+        'xs': '500px',
+      }
+    },
   },
   plugins: [],
 }
