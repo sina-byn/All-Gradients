@@ -7,8 +7,11 @@ import GRADIENTS_DATA from './data/GradientsData';
 
 // Importing Components
 import GradientCard from './components/GradientCard';
+import LoadMoreButton from './components/ui/LoadMoreButton';
 
-GRADIENTS_DATA.forEach((gradient, idx) => {
+GRADIENTS_DATA.slice(0, 10).forEach((gradient, idx) => {
     const gradinetCard = new GradientCard(idx, gradient, null ,false);
     gradinetCard.render();
 });
+
+LoadMoreButton.render();
