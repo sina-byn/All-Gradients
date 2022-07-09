@@ -36,7 +36,7 @@
             class="text-sm text-gray-200 bg-orange-500 rounded-full px-4 py-2 transition-transform duration-200 active:scale-95"
           >
             <a href="#custom-gradient-section">
-              Create Your Own Gradient
+              Create Your Own Gradients
             </a>
           </li>
         </ul>
@@ -75,6 +75,45 @@
       </div>
     </section>
 
+    {{! Guide Section }}
+    <section id="guide-section" class="guide-section flex flex-col mt-10">
+      <div class="title flex items-center relative">
+        <div
+          class="fading-line w-[calc(100%_-_70px)] h-2 absolute left-[70px] -z-10"
+        ></div>
+        <h2 class="w-[60px] text-lg overflow-hidden mb-1">Guide</h2>
+      </div>
+      <div class="guide-text mt-4">
+        <div class="flex items-center gap-x-2">
+          <span>Click on the clipboard icon to get the code of the gradient :</span>
+          <svg
+            class="h-6 fill-gray-800"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <path
+              d="M336 64h-53.88C268.9 26.8 233.7 0 192 0S115.1 26.8 101.9 64H48C21.5 64 0 85.48 0 112v352C0 490.5 21.5 512 48 512h288c26.5 0 48-21.48 48-48v-352C384 85.48 362.5 64 336 64zM192 64c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S160 113.7 160 96C160 78.33 174.3 64 192 64zM272 224h-160C103.2 224 96 216.8 96 208C96 199.2 103.2 192 112 192h160C280.8 192 288 199.2 288 208S280.8 224 272 224z"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <p>Click on each color code you see to copy its code.</p>
+        </div>
+        <div>
+          The output code syntax looks like :
+          <pre
+            class="w-full bg-[#0D1117] overflow-x-auto py-4 pl-8 rounded-2xl mt-4"
+          ><code class="w-full min-w-[400px] text-gray-200">
+  <span class="text-yellow-400">// fallback - background-color - used in case of support issues</span>
+  <span class="text-violet-500">background-color:</span> #4389A2;
+  <span class="text-yellow-400">// -webkit-prefix</span>
+  <span class="text-violet-500">background:</span> -webkit-linear-gradient(to bottom right, #5C258D, #4389A2);
+  <span class="text-violet-500">background:</span> linear-gradient(to bottom right, #5C258D, #4389A2);</code>
+          </pre>
+        </div>
+      </div>
+    </section>
+
     {{! Toast-Notification-Container }}
     <div
       class="toast-notif-container flex flex-col gap-y-2 items-end fixed top-5 right-[30px] z-20"
@@ -101,8 +140,12 @@
     {{! Footer }}
     <footer class="w-full text-center my-3">
       <p>Developed By
-        <a href="https://sina-bayan.netlify.app/" target="_blank" rel="noreferrer" class="text-orange-500">Sina
-          Bayandorian</a>
+        <a
+          href="https://sina-bayan.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+          class="text-orange-500"
+        >Sina Bayandorian</a>
         with ❤️</p>
     </footer>
   </body>
