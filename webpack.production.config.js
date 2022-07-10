@@ -1,5 +1,4 @@
 const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
     CleanWebpackPlugin
@@ -52,20 +51,14 @@ module.exports = {
         ],
     },
     plugins: [
-        new TerserPlugin(),
         new MiniCssExtractPlugin({
             filename: 'styles.[contenthash].css',
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            inject: true,
-            hash: true,
             title: 'All-Gradients | By Sina Bayandorian',
             template: './src/index.hbs',
             description: 'A website developed by Sina Bayandorian for you to access lots and lots of ready-to-use gradients and also to generate the gradients of your own',
         }),
     ],
-    devServer: {
-        allowedHosts: 'all',
-    },
 }

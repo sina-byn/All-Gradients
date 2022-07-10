@@ -4,10 +4,8 @@
   "description": "A site to create gradients of your own or use pregenerated gradients",
   "main": "index.js",
   "scripts": {
-    "serve": "npm run watch && npm run start",
-    "start": "webpack serve",
-    "watch": "webpack --watch",
-    "build": "webpack --config webpack.config.js"
+    "dev": "webpack serve --config webpack.dev.config.js --hot",
+    "build": "webpack --config webpack.production.config.js"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +25,7 @@
     "postcss-preset-env": "^7.7.2",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
     "tailwindcss": "^3.1.5",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
